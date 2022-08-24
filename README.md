@@ -52,12 +52,20 @@ $ docker run -it -v $(pwd):/app -w /app python:3.10 python -m unittest discover 
 - If multiple files are specfied, the top results are extended, not combined. This means if the two lists have the same phrases, the equivalent phrases counts will not be added. (a debatable behavior)
 - There is no timeout for stdin if supplied. This means the program will hang indefinitely if no input is given. (also a debatable behavior)
 - Some repetitious phrases which would not be considered as 'phrases' are counted. eg. page footers.
+- Thread pool management is not optimized.
 
 ## Future Work and Feature Goals
 [ ]: build pkg and push to pypi
+
 [ ]: build as standalone executable (avoid python app.py)
+
 [ ]: add unicode support via a new normalization strategy
+
 [ ]: brew recipe, because everyone loves a recipe
+
 [ ]: improve primary content recognition (avoid page footers)
 
+
 ## Notes from the Author
+
+>This was a fun project to implement. I attempted to stick with a strategy pattern, and abstract the core behavior from the user interactions to support use cases as a library. I picked python because I knew the language enough to implement something quickly and easily (python has awesome syntax/built-ins/etc). I would have liked to also add type annotations to the code, but alas, our time is finite. As for alternatives, a priority queue could be a fun approach, but I stuck with the KISS principle and 'just good enough'.
