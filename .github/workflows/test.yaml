@@ -1,4 +1,4 @@
-name: Phrase Counter jobs
+name: Tests
 
 on: [push]
 
