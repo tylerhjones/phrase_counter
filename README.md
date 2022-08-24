@@ -1,5 +1,7 @@
 # Top Word Phrases
 
+![Tests](https://github.com/tylerhjones/phrase_counter/actions/workflows/test.yaml/badge.svg)
+
 This program takes a list of one or more files as arguments, or stdin if no arguments are given.
 It then prints to stdout the top 100 most common three word phrases in the format `<phrase>  - <count>` sorted by count descending.
 
