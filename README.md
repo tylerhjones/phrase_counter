@@ -16,7 +16,7 @@ The project is split between interaction and fulfillment. `app.py` handles user 
 Phrase counter uses a strategy pattern to change out behavior based on future needs. Presently this project only supports a default behavior, but could easily add new sorting, character normalization, etc.
 
 Phrases are defined as N number of consecutive words within a sentence.
-We count the phrases via a sliding window of size N. example for N=2, with `[]` denoting the window.
+We count the phrases via a sliding window of size N. example for N=3, with `[]` denoting the window.
 ```
 [I love sandwiches] for lunch
 I [love sandwiches for] lunch
